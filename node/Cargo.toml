@@ -1,5 +1,5 @@
 [package]
-name = "solochain-template-node"
+name = "novai-node"
 description = "A solochain node template built with Substrate, part of Polkadot Sdk."
 version = "0.1.0"
 license = "Unlicense"
@@ -44,6 +44,8 @@ sc-executor.default-features = true
 sc-executor.workspace = true
 sc-network.default-features = true
 sc-network.workspace = true
+sc-network-types.default-features = true
+sc-network-types.workspace = true
 sc-offchain.default-features = true
 sc-offchain.workspace = true
 sc-service.default-features = true
@@ -54,7 +56,7 @@ sc-transaction-pool-api.default-features = true
 sc-transaction-pool-api.workspace = true
 sc-transaction-pool.default-features = true
 sc-transaction-pool.workspace = true
-solochain-template-runtime.workspace = true
+novai-runtime.workspace = true
 sp-api.default-features = true
 sp-api.workspace = true
 sp-block-builder.default-features = true
@@ -86,14 +88,14 @@ substrate-build-script-utils.workspace = true
 
 [features]
 default = ["std"]
-std = ["solochain-template-runtime/std"]
+std = ["novai-runtime/std"]
 # Dependencies that are only required if runtime benchmarking should be build.
 runtime-benchmarks = [
 	"frame-benchmarking-cli/runtime-benchmarks",
 	"frame-system/runtime-benchmarks",
 	"pallet-transaction-payment/runtime-benchmarks",
 	"sc-service/runtime-benchmarks",
-	"solochain-template-runtime/runtime-benchmarks",
+	"novai-runtime/runtime-benchmarks",
 	"sp-runtime/runtime-benchmarks",
 ]
 # Enable features that allow the runtime to be tried and debugged. Name might be subject to change
@@ -101,6 +103,6 @@ runtime-benchmarks = [
 try-runtime = [
 	"frame-system/try-runtime",
 	"pallet-transaction-payment/try-runtime",
-	"solochain-template-runtime/try-runtime",
+	"novai-runtime/try-runtime",
 	"sp-runtime/try-runtime",
 ]
