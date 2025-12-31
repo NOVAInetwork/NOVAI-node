@@ -83,3 +83,5 @@ codegen-units = 1
 inherits = "release"
 lto = true
 
+[patch.crates-io]
+sc-network-types = "=0.15.4"
